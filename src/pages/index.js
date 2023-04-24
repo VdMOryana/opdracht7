@@ -1,8 +1,9 @@
 import Head from 'next/head';
-import NavigationBar from '@/components/Navigation';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ButtonGroup from '@/components/Buttons';
+import useNetwork from '@/data/network';
+import Link from 'next/link';
 
 import styles from '@/styles/Home.module.css';
 import 'swiper/css';
@@ -11,6 +12,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 export default function Home() {
+  const { network, isLoading, isError } = useNetwork()
+ 
+  if (isLoading) return <div>Loading ...</div>
+  if (isError) return <div>Error ...</div>
+
+  const stations = network.stations;
+
   return (
     <>
       <Head>
@@ -18,6 +26,10 @@ export default function Home() {
       </Head>
 
       <main>
+        <div>
+          {stations.map(station => <Link href={`/stations/${station.id}`} key={station.id}>{station.name}</Link>)}
+        </div>
+
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
@@ -64,8 +76,6 @@ export default function Home() {
         </Swiper>
 
         <ButtonGroup/>
-
-        <NavigationBar/>
       </main>
     </>
   )
