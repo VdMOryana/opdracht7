@@ -3,14 +3,25 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ButtonGroup from '@/components/Buttons';
 import useNetwork from '@/data/network';
-import Link from 'next/link';
 import {useState} from 'react';
+import Link from 'next/link';
+
+/*import ImageLogo from '../public/images/Logo.png';
+
+        <div className={styles.Header}>
+          <image src = {ImageLogo} alt="Logo"/>
+        </div>
+        
+*/
+
 
 import styles from '@/styles/Home.module.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+
+
 
 export default function Home() {
   const [ filter, setFilter ] = useState('');
@@ -31,29 +42,34 @@ export default function Home() {
         <title>Antwerpen Rollers</title>
       </Head>
 
-      <main>
+      <main >
+        <div className={styles.Header}>
+        </div>
 
         <div>
-        <input type='text' value={filter} onChange={handleFilterChange}/>
-          {stations.map(station => <Link href={`/stations/${station.id}`} key={station.id}>{station.name}</Link>)}
+          <h1 className={styles.TussenTitels}> Zoek een Velo- station of adres </h1>
+          <Link href="/filter">
+            <button className={styles.SearchButton} > Search </button>
+          </Link>
         </div>
+
+        <h1 className={styles.TussenTitels}> Tarieven </h1>
 
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={1}
           navigation
-          scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
         >
+
           <SwiperSlide> 
             <div className={styles.SwiperSlide}>
               <div class="slide-content">
-              <h2> Dagpas </h2>
-              <p> Krijg 24 uur lang toegang tot Velo. </p>
-              <p> €5 </p>
-              <button>Knop tekst</button>
+              <h2 className={styles.TitelSwiper}> Dagpas * </h2>
+              <p className={styles.InfoSwiper}> Krijg 24 uur lang toegang tot Velo. </p>
+              <p className={styles.PrijsSwiper}> €5 </p>
               </div>
             </div>
           </SwiperSlide>
@@ -61,10 +77,9 @@ export default function Home() {
           <SwiperSlide> 
           <div className={styles.SwiperSlide}>
             <div class="slide-content">
-              <h2> Weekpas </h2>
-              <p> Krijg 7 dagen lang toegang tot Velo. </p>
-              <p> €12 </p>
-              <button>Knop tekst</button>
+              <h2 className={styles.TitelSwiper}> Weekpas * </h2>
+              <p className={styles.InfoSwiper}> Krijg 7 dagen lang toegang tot Velo. </p>
+              <p className={styles.PrijsSwiper}> €12 </p>
             </div>
           </div>
 
@@ -72,16 +87,25 @@ export default function Home() {
           <SwiperSlide>
           <div className={styles.SwiperSlide}>
             <div class="slide-content">
-              <h2> Jaarkaart </h2>
-              <p> Krijg 1 jaar lang toegang tot Velo. </p>
-              <p> €58 </p>
-              <button>Knop tekst</button>
+              <h2 className={styles.TitelSwiper}> Jaarkaart * </h2>
+              <p className={styles.InfoSwiper}> Krijg 1 jaar lang toegang tot Velo. </p>
+              <p className={styles.PrijsSwiper}> €58 </p>
               </div>
             </div>
           </SwiperSlide>
-
-          <p> 30 minuten per rit inbegrepen. Rit 30 - 60 minuten +€0,50. Rit 60 - 90 minuten +€1,50. Rit meer dan 90 minuten +€5 / begonnen uur</p>
         </Swiper>
+
+        <p className={styles.Onderschrift}> * 30 minuten per rit inbegrepen. <br />
+            Rit 30 - 60 minuten +€0,50. <br />
+            Rit 60 - 90 minuten +€1,50. <br />
+            Rit meer dan 90 minuten +€5 / begonnen uur </p>
+
+        <div className={styles.HelpContainer}>
+          <h1 className={styles.TussenTitels}>Help</h1>
+          <button className={styles.CircleButton}>
+            <span className={styles.Circle}></span>
+          </button>
+        </div>
 
         <ButtonGroup/>
 
