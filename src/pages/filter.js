@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import useNetwork from '@/data/network';
 import styles from '@/styles/Stations.module.css';
+import Logo from '../../public/Logo.png';
 
 
 export default function Filter() {
@@ -20,7 +22,11 @@ export default function Filter() {
 return (
     <>  
     <main>
-        <div className={styles.Header}>
+      <div className={styles.Header}>
+          <Image className={styles.Logo}
+            src ={Logo} 
+            alt="Logo"
+          />
         </div>
 
         <div>

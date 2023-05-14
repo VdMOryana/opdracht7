@@ -1,5 +1,7 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import React, { useState } from 'react';
+import Logo from '../../public/Logo.png';
 
 import styles from '@/styles/Account.module.css';
 
@@ -28,7 +30,11 @@ function LoginPage() {
 
     <main>
       <div className={styles.Header}>
-      </div>
+          <Image className={styles.Logo}
+            src ={Logo} 
+            alt="Logo"
+          />
+        </div>
 
       <div>
         <h1>Inloggen</h1>
