@@ -100,14 +100,10 @@ export default function Home() {
 
         <div className={styles.HelpContainer}>
           <h1 className={styles.TussenTitels}>Help</h1>
-          <button className={styles.CircleButton}>
-            <span className={styles.Circle}>
-              <Image className={styles.Telefoon}
-              src ={Telefoon} 
-              alt="Bel"
-              />
-            </span>
-          </button>
+          <Image className={styles.Telefoon}
+            src ={Telefoon} 
+            alt="Telefoon"
+          />
         </div>
 
         <ButtonGroup/>
