@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #FFCE00;
+    background-color: #ffcc00b4;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #FFCE00;
+    background-color: #ffcc00b4;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -44,11 +44,11 @@
 }
 
 .ButonLeft:focus{
-    color: #F5F5F5;
+    color: grey;
     text-decoration: none;
 }
 
 .ButonRight:focus{
-    color: #F5F5F5;
+    color: grey;
     text-decoration: none;
 }

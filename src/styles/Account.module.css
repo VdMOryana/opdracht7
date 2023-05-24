@@ -25,12 +25,12 @@
     border: none;
     border-radius: 2vw;
     font-size: 3vw;
-    background-color: #0362c7;
+    background-color: #b309a575;
     color: #F5F5F5;
     margin-top: 8vw;
 }
 
 .SearchButton:hover{
-    background-color: #007bff;
+    background-color: #c251b9;
     color: #F5F5F5;
 }

@@ -31,6 +31,7 @@ function LoginPage() {
           <button className={styles.SearchButton}> Inloggen</button>
         </form>
       </div>
+
     </main>
     </>
   );
