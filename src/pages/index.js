@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -6,7 +5,6 @@ import ButtonGroup from '@/components/Buttons';
 import useNetwork from '@/data/network';
 import {useState} from 'react';
 import Link from 'next/link';
-import Logo from '../../public/Logo.png';
 import Telefoon from '../../public/Telefoon.png';
 
 import styles from '@/styles/Home.module.css';
@@ -32,17 +30,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Antwerpen Rollers</title>
-      </Head>
-
       <main >
-        <div className={styles.Header}>
-          <Image className={styles.Logo}
-            src ={Logo} 
-            alt="Logo"
-          />
-        </div>
 
         <div>
           <h1 className={styles.TussenTitels}> Zoek een Velo- station of adres </h1>

@@ -14,7 +14,7 @@ function ButtonGroup() {
       <Link href="/problemen">
       <button className={styles.button}> Problemen bij nemen of terugplaatsen fiets </button>
       </Link>
-      <Link href="/kaart">
+      <Link href="/account">
       <button className={styles.button}> Kaart verloren </button>
       </Link>
     </div>

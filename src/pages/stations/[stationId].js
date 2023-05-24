@@ -1,6 +1,13 @@
+import Image from 'next/image';
+import Free from '../../../public/Free.png';
+import Empty from '../../../public/Empty.png';
+import Back from '../../../public/Back.png';
+import Link from 'next/link';
+
 import useNetwork from '@/data/network';
 import {useRouter} from 'next/router';
-import styles from '@/styles/Stations.module.css';
+
+import styles from '@/styles/FilterStation.module.css';
 
 export default function Home(){
     const {network, isLoading, isError} = useNetwork()
@@ -13,12 +20,38 @@ export default function Home(){
     console.log(station)
     
     return (    
-        <div className={styles.station}>
+        <>
+        <main >
+
+          <div className={styles.station}>
             <h1 className={styles.TussenTitels}>{station.name}</h1>
             <h2 className={styles.OnderTitels}>{station.extra.address}</h2>
-            <p className={styles.Text}>Free bikes: {station.free_bikes}</p>
-            <p className={styles.Text}>Empty slots: {station.empty_slots}</p>
+            <div className={styles.Container}>
+              <Image className={styles.Free}
+              src ={Free} 
+              alt="Free bikes"
+              />
+              <p className={styles.Text}>Free bikes: {station.free_bikes}</p>
+            </div>
+            <div className={styles.Container}>
+              <Image className={styles.Empty}
+              src ={Empty} 
+              alt="Empty slots"
+              />
+              <p className={styles.Text}>Empty slots: {station.empty_slots}</p>
+            </div>
 
-        </div>
-      )
+            <Link href="/filter">
+              <button className={styles.BackButton}> 
+                <Image className={styles.Back}
+                src ={Back} 
+                alt="Back"
+                />
+              </button>
+            </Link>   
+
+            </div>
+        </main>
+        </>
+    )
 }

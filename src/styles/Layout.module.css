@@ -1,14 +1,30 @@
+.Header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #F2DCE4;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.Logo{
+    height: 13vw;
+    width: auto;
+}
+
 .Navigation{
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #D9D9D9;
+    background-color: #F2DCE4;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     z-index: 99;
-
 }
 
 .ButonLeft{
@@ -28,11 +44,11 @@
 }
 
 .ButonLeft:focus{
-    color: white;
+    color: #732727;
     text-decoration: none;
 }
 
 .ButonRight:focus{
-    color: white;
+    color: #732727;
     text-decoration: none;
 }

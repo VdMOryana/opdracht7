@@ -1,10 +1,22 @@
 import '@/styles/globals.css'
-import Layout from '@/components/Layout'
+import Header from '@/components/Header'
+import Navigation from '@/components/Navigation'
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
+  <>
+    <div className="SpaceBottom" ></div>
+
+    <Header>
       <Component {...pageProps} />
-    </Layout>
+    </Header>
+
+    <Navigation>
+      <Component {...pageProps} />
+    </Navigation>
+
+    <div className="SpaceBottom" ></div>
+
+  </>
   )
 }

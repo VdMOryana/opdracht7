@@ -1,3 +1,12 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
+    background-color: #F5F5F5;
+}
+
+.SpaceTop{
+    margin-top: 100px;
+}
+
+.SpaceBottom{
+    margin-bottom: 100px;
 }

@@ -1,7 +1,4 @@
-import Head from 'next/head';
-import Image from 'next/image';
 import React, { useState } from 'react';
-import Logo from '../../public/Logo.png';
 
 import styles from '@/styles/Account.module.css';
 
@@ -18,38 +15,20 @@ function LoginPage() {
     setPassword(event.target.value);
   };
 
-  const handleLogin = () => {
-    // Voer hier code uit om de inloggegevens te verifiëren en de gebruiker in te loggen
-  };
-
   return (
     <>
-      <Head>
-        <title>Antwerpen Rollers</title>
-      </Head>
-
     <main>
-      <div className={styles.Header}>
-          <Image className={styles.Logo}
-            src ={Logo} 
-            alt="Logo"
-          />
-        </div>
 
       <div>
-        <h1>Inloggen</h1>
+        <h1 className={styles.TussenTitels}> Inloggen</h1>
         <form>
-          <label>
-            Gebruikersnaam:
-            <input type="text" value={username} onChange={handleUsernameChange} />
-          </label>
-          <br />
-          <label>
-            Wachtwoord:
-            <input type="password" value={password} onChange={handlePasswordChange} />
-          </label>
-          <br />
-          <button type="button" onClick={handleLogin}>Inloggen</button>
+          <p className={styles.OnderTitels}> Gebruikersnaam </p>
+            <input className={styles.SearchBalk} type="text"/>
+          
+          <p className={styles.OnderTitels}> Wachtwoord </p>
+            <input className={styles.SearchBalk} type="text"/>
+
+          <button className={styles.SearchButton}> Inloggen</button>
         </form>
       </div>
     </main>

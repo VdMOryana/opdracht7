@@ -1,11 +1,9 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import useNetwork from '@/data/network';
 import styles from '@/styles/Stations.module.css';
 
-import Logo from '../../public/Logo.png';
 import Green from '../../public/Green.png';
 import Red from '../../public/Red.png';
 
@@ -28,15 +26,7 @@ export default function Filter() {
       
 return (
     <>  
-    <Head>
-      <title>Antwerpen Rollers</title>
-    </Head>
-
     <main>
-    <div className={styles.Header}>
-      <Image className={styles.Logo} src={Logo} alt="Logo" />
-    </div>
-
     <div>
       <h1 className={styles.TussenTitels}>Zoek een Velo-station of adres</h1>
       <input className={styles.SearchBalk} type="text" value={filter} onChange={handleFilterChange} />
