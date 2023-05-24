@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Free from '../../../public/Free.png';
 import Empty from '../../../public/Empty.png';
-import Back from '../../../public/Back.png';
-import Link from 'next/link';
 
 import useNetwork from '@/data/network';
 import {useRouter} from 'next/router';
@@ -39,16 +37,7 @@ export default function Home(){
               alt="Empty slots"
               />
               <p className={styles.Text}>Empty slots: {station.empty_slots}</p>
-            </div>
-
-            <Link href="/filter">
-              <button className={styles.BackButton}> 
-                <Image className={styles.Back}
-                src ={Back} 
-                alt="Back"
-                />
-              </button>
-            </Link>   
+            </div> 
 
             </div>
         </main>
