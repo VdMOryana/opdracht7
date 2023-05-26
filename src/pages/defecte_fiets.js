@@ -1,5 +1,7 @@
 import React from 'react';
 import DefFiets from '@/components/DefecteFiets';
+import Link from 'next/link';
+
 
 import styles from '@/styles/Help.module.css';
 
@@ -20,8 +22,9 @@ export default function DefecteFiets() {
 
           <DefFiets/>
 
-          <button className={styles.SearchButton} > Verzenden </button>
-
+          <Link href="verzenden">
+            <button className={styles.SearchButton} > Verzenden </button>
+          </Link>
         </main>
         </>
     )

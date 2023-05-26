@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import styles from '@/styles/Help.module.css';
 
@@ -20,8 +21,9 @@ export default function Problemen() {
 
           </div>
 
-
-          <button className={styles.SearchButton} > Verzenden </button>
+          <Link href="verzenden">
+            <button className={styles.SearchButton} > Verzenden </button>
+          </Link>
 
         </main>
         </>

@@ -1,5 +1,6 @@
 import React from 'react';
 import DefStation from '@/components/DefectStation';
+import Link from 'next/link';
 
 import styles from '@/styles/Help.module.css';
 
@@ -19,7 +20,9 @@ export default function DefectStation() {
 
           <DefStation/>
 
-          <button className={styles.SearchButton} > Verzenden </button>
+          <Link href="verzenden">
+            <button className={styles.SearchButton} > Verzenden </button>
+          </Link>
 
         </main>
         </>
