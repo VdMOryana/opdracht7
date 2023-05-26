@@ -4,6 +4,7 @@ import Empty from '../../../public/Empty.png';
 
 import useNetwork from '@/data/network';
 import {useRouter} from 'next/router';
+import { FaArrowLeft } from 'react-icons/fa';
 
 import styles from '@/styles/FilterStation.module.css';
 
@@ -20,9 +21,14 @@ export default function Home(){
     return (    
         <>
         <main >
-
           <div className={styles.station}>
+          <div className={styles.BackHeader}>
+            <FaArrowLeft
+              className={styles.backIcon}
+              onClick={() => router.back()}
+            />
             <h1 className={styles.TussenTitels}>{station.name}</h1>
+            </div>
             <h2 className={styles.OnderTitels}>{station.extra.address}</h2>
             <div className={styles.Container}>
               <Image className={styles.Free}

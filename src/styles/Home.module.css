@@ -11,12 +11,12 @@
     border: none;
     border-radius: 2vw;
     font-size: 3.5vw;
-    background-color: #DD0800;
+    background-color: #BF0500;
     color: #F5F5F5;
 }
 
 .SearchButton:hover{
-    background-color: #B309A6;
+    background-color: #E91E63;
     color: #F5F5F5;
 }
 
@@ -38,7 +38,7 @@
 
 .Onderschrift{
     font-size: 2.3vw;
-    color: #4d4d4d;
+    color: #333333;
     margin-left: 3.5vw;
 }
 

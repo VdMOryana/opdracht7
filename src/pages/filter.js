@@ -31,8 +31,6 @@ return (
       <h1 className={styles.TussenTitels}>Zoek een Velo-station of adres</h1>
       <input className={styles.SearchBalk} type="text" value={filter} onChange={handleFilterChange} />
     </div>
-
-    <div className={styles.PaddingBottom}>
       {filteredStations.map(station => {
         const Beschikbaarheid = filter && (station.free_bikes > 5 ? <Image className={styles.Beschikbaarheid} src={Green} alt="Groen"/> : <Image className={styles.Beschikbaarheid} src={Red} alt="Rood"/>);
         return (
@@ -62,10 +60,7 @@ return (
           })}
         </>
       )}
-    </div>
 </main>
-
-
     </>
   )
 }

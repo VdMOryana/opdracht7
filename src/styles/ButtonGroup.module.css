@@ -11,7 +11,7 @@
 .button {
   width: 100%;
   height: 100%;
-  background-color: #DD0800;
+  background-color: #BF0500;
   color: #F5F5F5;
   border: none;
   border-radius: 5px;
@@ -21,6 +21,6 @@
 }
 
 .button:hover{
-  background-color: #c251b9;
+  background-color: #E91E63;
   color: #F5F5F5;
 }

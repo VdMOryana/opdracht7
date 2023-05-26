@@ -48,11 +48,16 @@ export default function Home() {
           navigation
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
+          style={{
+            '--swiper-navigation-color': '#BF0500',
+            '--swiper-navigation-color-prev': '#BF0500',
+            '--swiper-navigation-color-next': '#BF0500',
+          }}
         >
 
           <SwiperSlide> 
             <div className={styles.SwiperSlide}>
-              <div class="slide-content">
+              <div className="slide-content">
               <h2 className={styles.TitelSwiper}> Dagpas * </h2>
               <p className={styles.InfoSwiper}> Krijg 24 uur lang toegang tot Velo. </p>
               <p className={styles.PrijsSwiper}> €5 </p>
@@ -62,7 +67,7 @@ export default function Home() {
 
           <SwiperSlide> 
           <div className={styles.SwiperSlide}>
-            <div class="slide-content">
+            <div className="slide-content">
               <h2 className={styles.TitelSwiper}> Weekpas * </h2>
               <p className={styles.InfoSwiper}> Krijg 7 dagen lang toegang tot Velo. </p>
               <p className={styles.PrijsSwiper}> €12 </p>
@@ -72,7 +77,7 @@ export default function Home() {
           </SwiperSlide>
           <SwiperSlide>
           <div className={styles.SwiperSlide}>
-            <div class="slide-content">
+            <div className="slide-content">
               <h2 className={styles.TitelSwiper}> Jaarkaart * </h2>
               <p className={styles.InfoSwiper}> Krijg 1 jaar lang toegang tot Velo. </p>
               <p className={styles.PrijsSwiper}> €58 </p>

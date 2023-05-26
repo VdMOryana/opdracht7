@@ -1,7 +1,18 @@
+.backIcon {
+    color: #BF0500;
+    font-size: 7vw;
+}
+
 .TussenTitels{
     font-size: 7vw;
     margin-top: 7.5vw;
     text-align: center;
+}
+
+.BackHeader{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
 }
 
 .OnderTitels{
@@ -18,7 +29,7 @@
     align-items: center;
     justify-content: space-evenly;
     color: #F5F5F5;
-    background-color:#b309a575;
+    background-color:#BF0500;
     margin-bottom: 4vw;
     padding: 2.5vw;
     border-radius: 4vw;
